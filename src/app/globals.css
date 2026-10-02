@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --navy: #061427;
+  --navy2: #0B1F3A;
+  --gold: #C9A66B;
+  --sand: #E9DDC7;
+  --ink: #102033;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #ffffff;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 3px solid var(--gold);
+  outline-offset: 4px;
+}
+
+.network-bg {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(201,166,107,.28), transparent 24%),
+    radial-gradient(circle at 70% 30%, rgba(255,255,255,.14), transparent 20%),
+    radial-gradient(circle at 45% 80%, rgba(201,166,107,.18), transparent 26%),
+    linear-gradient(135deg, #061427 0%, #0B1F3A 56%, #08162A 100%);
+}
+
+.fade-up {
+  animation: fadeUp .7s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
